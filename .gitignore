@@ -1,0 +1,7 @@
+.env
+.venv/
+db.sqlite3
+.idea/
+users/__pycache__/
+social_networking/__pycache__/
+.DS_Store
