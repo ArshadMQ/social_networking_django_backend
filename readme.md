@@ -18,13 +18,13 @@ Ensure you have the following installed:
 1. **Clone the repository**
 
     ```sh
-    git clone https://github.com/your-repo-url/social_networking.git
+    git clone https://github.com/ArshadQ118/social_networking_django_backend.git
     ```
 
 2. **Navigate to the project directory**
 
     ```sh
-    cd social_networking
+    cd social_networking_django_backend
     ```
 
 3. **Create a virtual environment**
@@ -74,17 +74,17 @@ To simplify testing, a Postman collection is included. Import the `Social_Networ
 ### API Endpoints
 
 - **User Login/Signup**
-  - `POST /api/signup/` - Sign up a new user.
-  - `POST /api/login/` - Log in an existing user.
+  - `POST /api/users/register/` - Sign up a new user.
+  - `POST /api/users/login/` - Log in an existing user.
   
 - **User Search**
-  - `GET /api/users/search/?q=<keyword>` - Search for users by email or name (pagination supported).
+  - `GET /api/users/search/?qsearch=<keyword>` - Search for users by email or name (pagination supported).
 
 - **Friend Requests**
-  - `POST /api/friend-request/send/` - Send a friend request.
-  - `POST /api/friend-request/accept/` - Accept a friend request.
-  - `POST /api/friend-request/reject/` - Reject a friend request.
-  - `GET /api/friend-request/pending/` - List pending friend requests.
+  - `PATCH /api/users/friend-request/<int:request_id>` Access/Reject a friend request.
+
+- **Pending Requests**
+  - `GET /api/users/pending-requests/<int:request_id>` To List friends requests
   
 - **Friends List**
   - `GET /api/friends/` - List friends.
